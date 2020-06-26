@@ -1,0 +1,29 @@
+.enquiry{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  right: 0px;
+  top: 50%;
+  z-index: 100;
+  .inner_part{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 5px;
+    justify-content: space-between;
+    height: 200px;
+  }
+  .send {
+    transform: rotate(270deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  }
+}

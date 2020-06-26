@@ -1,0 +1,176 @@
+<div class="container">
+  <div class="title"><div>Services</div>  </div>
+  <div class="buttons_panel">
+    <div class="twobuttons">
+      <div #services [ngClass]="!switchStatus ? 'active' : ''" (click) = "switchTabs('services')">Services</div>
+      <div #industries [ngClass]="switchStatus ? 'active' : ''" (click) = "switchTabs('industries')">Industries</div>
+    </div>
+  </div>
+
+  <div class="services_industries">
+    <div class="industries_container" *ngIf="switchStatus"></div>
+    <div class="services_container" *ngIf="!switchStatus">
+      <div class="service vr">
+        <div class='image'>
+          <!-- <img
+            src="assets/image/hp_ssets/Icons-Services/VirtualReality.png"
+            alt=""
+          /> -->
+          <i class = 'fa fa-mobile'></i>
+        </div>
+        <div class = 'head'>Application Development</div>
+        <div class='text'>
+          In these days every adult individual has a smartphone. As they have smartphone that is why use of Applications has been increased.
+          I provide development of applications in Android and IOS from scratch with the designs too.
+        </div>
+        <!-- <div class = 'more'>More</div> -->
+      </div>
+      <div class="service ts">
+        <div class='image'>
+          <!-- <img
+            src="assets/image/hp_ssets/Icons-Services/TouchScreen.png"
+            alt=""
+          /> -->
+          <i class = 'fa fa-globe'></i>
+        </div>
+        <div class = 'head'>Web Development</div>
+        <div class='text'>
+          In these days Websites are needed to every business for its expansion and to reach out to maximum number of customers.
+          I provide any type of website from Portfolios to Business websites and Dashboards.
+        </div>
+        <!-- <div class = 'more'>More</div> -->
+      </div>
+      <div class="service ad">
+        <div class='image'>
+          <i class = 'fa fa-object-ungroup'></i>
+        </div>
+        <div class = 'head'>UI/UX</div>
+        <div class='text'>
+          UI/UX is a very important part of a software, this makes user to stay with the applicaton happily and gets satisfactory results.
+        </div>
+        <!-- <div class = 'more'>More</div> -->
+      </div>
+      <div class="service ar">
+        <div class='image'>
+          <!-- <img
+            src="assets/image/hp_ssets/Icons-Services/AugmentedReality.png"
+            alt=""
+          /> -->
+          <i class="fa fa-vials"></i>
+        </div>
+        <div class = 'head'>Automation/Manual Testing</div>
+        <div class='text'>
+          Testing is very needful on websites or applications. So choose this as it is really needed that the project should go into the testing phase in a professional manner.
+        </div>
+        <div class = 'more'>More</div>
+      </div>
+      <div class="service ibs">
+        <div class='image'>
+          <img
+            src="assets/image/hp_ssets/Icons-Services/IotBasedSolutions.png"
+            alt=""
+          />
+        </div>
+        <div class = 'head'>Digital Marketing</div>
+        <div class='text'>
+          Now a days digital marketing is also a key to enhance and increase your business, try me once for these, experts will work on it.
+        </div>
+        <div class = 'more'>More</div>
+      </div>
+      <div class="service mr">
+        <div class='image'>
+          <img
+            src="assets/image/hp_ssets/Icons-Services/MixedReality.png"
+            alt=""
+          />
+        </div>
+        <div class = 'head'>Wordpress</div>
+        <div class='text'>
+          If you want your website to be build in a short period of time then you have come to the right place, because this technology will not let you down.
+        </div>
+        <div class = 'more'>More</div>
+      </div>
+    </div>
+    <!-- <div class="viewall" *ngIf="!switchStatus">View all services.</div>
+    <div class="viewall" *ngIf="switchStatus">View all industries.</div> -->
+  </div>
+
+</div>
+
+
+<div class="small_container">
+  <div class="inner_container">
+    <div class="head_container">
+      <div class="heading">Our Services</div>
+      <div class="twobuttons">
+        <div (click) = "switchTabs('services')" [ngClass] = "!switchStatus ? 'active' : ''">Services</div>
+        <div (click) = "switchTabs('industries')" [ngClass] = "switchStatus? 'active' : ''">Industries</div>
+      </div>
+    </div>
+    <div class="services_container" *ngIf="!switchStatus">
+      <div class="service vr">
+        <div class='image'>
+          <!-- <img
+            src="assets/image/hp_ssets/Icons-Services/VirtualReality.png"
+            alt=""
+          /> -->
+          <i class = 'fa fa-mobile-alt'></i>
+        </div>
+        <div class = 'head'>Application Development</div>
+        <div class = 'more'><i class='fa fa-long-arrow-right'></i> More</div>
+      </div>
+      <div class="service ts">
+        <div class='image'>
+          <img
+            src="assets/image/hp_ssets/Icons-Services/TouchScreen.png"
+            alt=""
+          />
+        </div>
+        <div class = 'head'>Website Development</div>
+        <div class = 'more'><i class='fa fa-long-arrow-right'></i> More</div>
+      </div>
+      <div class="service ad">
+        <div class='image'>
+          <img
+            src="assets/image/hp_ssets/Icons-Services/AppDevelopment.png"
+            alt=""
+          />
+        </div>
+        <div class = 'head'>UI/UX</div>
+        <div class = 'more'><i class='fa fa-long-arrow-right'></i> More</div>
+      </div>
+      <div class="service ar">
+        <div class='image'>
+          <img
+            src="assets/image/hp_ssets/Icons-Services/AugmentedReality.png"
+            alt=""
+          />
+        </div>
+        <div class = 'head'>Automation/Manual Testing</div>
+        <div class = 'more'><i class='fa fa-long-arrow-right'></i> More</div>
+      </div>
+      <div class="service ibs">
+        <div class='image'>
+          <img
+            src="assets/image/hp_ssets/Icons-Services/IotBasedSolutions.png"
+            alt=""
+          />
+        </div>
+        <div class = 'head'>HTML Development</div>
+        <div class = 'more'><i class='fa fa-long-arrow-right'></i> More</div>
+      </div>
+      <div class="service mr">
+        <div class='image'>
+          <img
+            src="assets/image/hp_ssets/Icons-Services/MixedReality.png"
+            alt=""
+          />
+        </div>
+        <div class = 'head'>Wordpress</div>
+        <div class = 'more'><i class='fa fa-long-arrow-right'></i> More</div>
+      </div>
+    </div>
+    <div class="industries_container" *ngIf = "switchStatus"></div>
+    <!-- <div class="viewall">View all services.</div> -->
+  </div>
+</div>

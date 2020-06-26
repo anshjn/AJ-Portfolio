@@ -1,0 +1,14 @@
+$background-dark : #020042;
+$header-blue: #0444a0;
+$gradient1: #0646a2;
+$gradient2: #55aaf9;
+$fontcolor: #706F72;
+@font-face {
+  font-family: boldfont;
+  src: url('/src/assets/fonts/Poppins/Poppins-Bold.ttf') format("ttf");
+}
+@font-face {
+  font-family: regularfont;
+  src: url('/src/assets/fonts/Poppins/Poppins-Regular.ttf') format("ttf");
+}
+$regular: regularfont;

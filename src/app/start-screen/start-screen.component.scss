@@ -1,0 +1,134 @@
+@import '../../assets/scss/variables.scss';
+@keyframes mymove {
+  // from {top: 20px;}
+  // to {top: 0px;}
+  0% {top: 20px;}
+  50% {top: 0px;}
+  100% {top: 20px;}
+}
+.big_screen {
+  display: flex;
+  font-family: 'Poppins', sans-serif;
+  .button_container {
+    font-size: 2vh;
+    cursor: pointer;
+    z-index: 10;
+
+    .button_image {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: 5px;
+      animation: mymove 1s infinite ease-in-out;
+      i{
+        padding: 0;
+        margin: 0;
+        line-height: .5;
+      }
+      &:hover {
+        animation: none;
+      }
+    }
+  }
+  @media (max-width: 990px) {
+    display: none;
+  }
+}
+.small_screen {
+  display: none;
+  font-family: 'Poppins', sans-serif;
+  @media (max-width: 990px) {
+    display: flex;
+
+  }
+
+}
+
+.start_screen{
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: $background-dark;
+  color: white;
+  .logo{
+    width: 16%;
+    z-index: 5;
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+  .tagline_container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    z-index: 1;
+    .tagline{
+      font-size: 40px;
+    }
+    .subTagline{
+      font-size: 16px;
+    }
+  }
+}
+
+
+
+
+
+
+.smstart_screen{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: $background-dark;
+  color: white;
+  .inner_container{
+    height: 90vh;
+    width: 85%;
+    position: relative;
+  }
+  .logo_n_burger{
+    display: flex;
+    height: 8vh;
+    align-items: center;
+    justify-content: space-between;
+    .logo{
+      width: 150px;
+      img{
+        width: 100%;
+      }
+    }
+    .burger{
+      font-size: 4vh;
+    }
+  }
+  .tagline_container{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height: 70%;
+    justify-content: flex-end;
+    .tagline{
+      font-size: 4vh;
+      line-height: 1.3;
+    }
+    .subTagline{
+      font-size: 2.5vh;
+      margin: 5px 0 0 0;
+      line-height: 1.5;
+    }
+  }
+  .button_container{
+    font-size: 5vh;
+    position: absolute;
+    bottom: 20px;
+  }
+}
+

@@ -1,0 +1,385 @@
+@import '../../assets/scss/variables.scss';
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 92vh;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  @media (max-width: 990px){
+    display: none;
+  }
+  .head_detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 26vh;
+    background-image: url('../../assets/image/hp_ssets/contact.jpg');
+    padding: 5% 0 0 0;
+    .heading{
+      font-size: 3vh;
+      color: white;
+
+    }
+    .text{
+      padding: 20px 0 0 0;
+      color: white;
+      font-size: 1.5vh;
+    }
+    .blocks{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 1px;
+      width: 60%;
+      height: 25vh;
+      background: #eaeaea;
+      position: relative;
+      bottom: -3vh;
+      .block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        justify-content: center;
+        background: white;
+        .icon{
+          margin: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img{
+            width: 50%;
+          }
+        }
+        .head{
+          font-size: 2vh;
+          padding: 10px;
+          font-weight: 600;
+          letter-spacing: 2px;
+        }
+        .texts{
+          font-weight: 200;
+          font-size: 1.3vh;
+          letter-spacing: 1px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .text{
+            padding: 3px;
+            color: black;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .map{
+    width: 100%;
+    overflow: hidden;
+    iframe{
+      width: 100%;
+    }
+  }
+  .bottom_navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 100%;
+    .sections{
+      width: 60%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .section{
+      padding: 10px 20px;
+      .text{
+        font-size: 1.3vh;
+        line-height: 1.5;
+        color: $fontcolor;
+      }
+      .three_circles{
+        display: flex;
+        margin: 10px 0;
+        .icon{
+          height: 2.5vh;
+          width: 2.5vh;
+          display: flex;
+          margin: 0 2px 0 0;
+          border-radius: 50%;;
+          justify-content: center;
+          align-items: center;
+          background: transparent;
+          &:hover {
+            background-image: linear-gradient($gradient1, $gradient2);
+          }
+          &:hover i {
+            color: white;
+            margin-top: 1px;
+          }
+          i{
+            font-size: 1.5vh;
+          }
+        }
+      }
+      .title{
+        font-size: 1.7vh;
+        font-weight: 600;
+      }
+      .admin_date{
+        display: flex;
+        font-size: 1.3vh;
+        padding: 7px 0;
+        color: $fontcolor;
+        .admin{
+          color: #37b7fa;
+        }
+        .date{
+          margin: 0 0 0 10px;
+        }
+      }
+    }
+    .links{
+      display: flex;
+      font-size: 1.3vh;
+      justify-content: space-between;
+      color: $fontcolor;
+      div{
+        margin: 0px 5px 5px 0;
+      }
+    }
+
+    .head{
+      font-size: 2vh;
+      padding: 10px 0;
+      font-weight: 600;
+    }
+    .sitemap{
+      font-size: 1.5vh;
+    }
+  }
+
+}
+.copyright{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background: #f4f4f4;
+  align-items: center;
+  .copy{
+    width: 60%;
+  }
+  .top{
+    position: absolute;
+    right: 100px;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    background: linear-gradient($gradient1, $gradient2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2vh;
+    top: -2.5vh;
+  }
+}
+
+.small_container{
+  display: none;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  @media (max-width: 990px){
+    display: flex;
+  }
+  .head_detail{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../../assets/image/hp_ssets/contact.jpg');
+    background-size: cover;
+    justify-content: center;
+    padding: 20px 0;
+    .heading{
+      font-size: 3vh;
+      color: white;
+      padding: 5px 0 5px 0;
+    }
+    .text_head{
+      padding: 10px 0 17px 0;
+      color: white;
+      font-size: 1.5vh;
+      width: 90%;
+    }
+    .blocks{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-row-gap: 1px;
+      width: 90%;
+      background: #eaeaea;
+
+      .block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        justify-content: center;
+        background: white;
+        padding: 5px 0;
+        .icon{
+          padding: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img{
+            width: 30%;
+          }
+        }
+        .head{
+          font-size: 2vh;
+          padding: 1.8px;
+          font-weight: 600;
+        }
+        .texts{
+          font-weight: 500;
+          font-size: 1.5vh;
+          text-align: center;
+          width: 100%;
+          .text{
+            padding: 7px 15px;
+            color: $fontcolor;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+  .map{
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+    iframe{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .sections{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+  }
+  .section{
+    // padding: 10px 20px;
+    width: 85%;
+    .text{
+      font-size: 1.5vh;
+      line-height: 1.5;
+      width: 100%;
+    }
+    .three_circles{
+      display: flex;
+      margin: 10px 0;
+      .icon{
+        height: 3vh;
+        width: 3vh;
+        display: flex;
+        margin: 0 4px 0 0;
+        border-radius: 50%;;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        &:hover {
+          background-image: linear-gradient($gradient1, $gradient2);
+        }
+        &:hover i {
+          color: white;
+          margin-top: 1px;
+        }
+        i{
+          font-size: 2vh;
+        }
+      }
+    }
+    .title{
+      font-size: 2vh;
+      font-weight: 600;
+      color: $fontcolor;
+    }
+    .admin_date{
+      display: flex;
+      font-size: 1.7vh;
+      padding: 7px 0;
+      .admin{
+        color: #37b7fa;
+      }
+      .date{
+        margin: 0 0 0 10px;
+        color: $fontcolor;
+      }
+    }
+    .head{
+      font-size: 2.5vh;
+      padding: 10px 0;
+      font-weight: 600;
+    }
+    .sitemap{
+      font-size: 2vh;
+      padding: 5px;
+      background: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .links{
+    display: flex;
+    font-size: 1.8vh;
+    justify-content: space-between;
+    color: $fontcolor;
+    div{
+      margin: 0px 5px 5px 0;
+    }
+  }
+  .copyright{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background: #f4f4f4;
+    align-items: center;
+    font-size: 1.2vh;
+    .copy{
+      width: 90%;
+    }
+    .top{
+      position: absolute;
+      right: 80px;
+      height: 5vh;
+      width: 5vh;
+      border-radius: 50%;
+      background: linear-gradient($gradient1, $gradient2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.5vh;
+      top: -2.5vh;
+    }
+  }
+}

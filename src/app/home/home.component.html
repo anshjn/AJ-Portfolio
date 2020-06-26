@@ -1,0 +1,135 @@
+<div class="bigHome">
+  <div class="enquirys">
+    <div class = 'inner'>
+      <div class="send" (click) = 'showModal()'>SEND ENQUIRY</div>
+    </div>
+    <div>
+      <div><i class="fa fa-facebook"></i></div>
+      <div><i class="fa fa-instagram" ></i></div>
+      <div><i class="fa fa-linkedin" ></i></div>
+    </div>
+  </div>
+
+  <!-- <app-start-screen></app-start-screen> -->
+  <div class="start_screen big_screen">
+    <!-- <div class="left_image"><img src="assets/image/rayqubeleft.png" alt=""></div>
+    <div class="right_image"><img src="assets/image/rayquberight.png" alt=""></div> -->
+    <div class="logo_container">
+      <div class="logo">AJ</div>
+    </div>
+
+    <div class="tagline_container">
+      <div class="tagline">Anshul Jain</div>
+      <div class="subTagline">Creative Designer & Developer</div>
+      <div class="button_container">
+        <div class="button_image" (click) = 'scroll("aboutus")'>
+          <i class="fa fa-angle-down"></i>
+          <i class="fa fa-angle-down"></i>
+          <i class="fa fa-angle-down"></i>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <div class="left_image"><img src="" alt=""></div> -->
+  </div>
+  <!-- <app-header></app-header> -->
+  <div class="header_main_container">
+    <header>
+      <div class="container">
+        <div class="logoNmenu">
+          <div class="logo_container">
+            <div class="logo">AJ</div>
+          </div>
+
+        <div class="menu">
+          <div class="menuitem" (click) = 'scroll("services")'> <span>SERVICES</span> <div class="line"></div></div>
+          <div class="menuitem" (click) = 'scroll("work")'> <span>PROJECTS</span> <div class="line"></div></div>
+          <div class="menuitem" (click) = 'scroll("aboutus")'> <span>ABOUT</span> <div class="line"></div></div>
+          <!-- <div class="menuitem" (click) = 'scroll("blogs")'> <span>BLOG</span> <div class="line"></div></div> -->
+          <div class="menuitem"> <span>CLIENTS</span> <div class="line"></div></div>
+          <div class="menuitem" (click) = 'scroll("contactus")'> <span>CONTACT</span> <div class="line"></div></div>
+          <!-- <div class="menuitem" > <a href="services" target="_self">SERVICES</a> </div>
+          <div class="menuitem" ><a href="work" target="_self">PROJECTS</a></div>
+          <div class="menuitem" ><a href="aboutus" target="_self">ABOUT US</a></div>
+          <div class="menuitem" ><a href="blogs" target="_self">BLOG</a></div>
+          <div class="menuitem">CLIENTS</div>
+          <div class="menuitem" ><a href="contactus" target="_self">CONTACT</a></div> -->
+        </div>
+        <div class="sending">
+          <div class="sendEnquiry" (click) = 'showModal()'>
+            <i class='fa fa-long-arrow-right'></i> &nbsp; Send Enquiry
+          </div>
+        </div>
+      </div>
+      </div>
+    </header>
+    <div class="rest">
+      <div #aboutus class= 'aboutus'><app-aboutus  ></app-aboutus></div>
+      <div #services ><app-our-services ></app-our-services></div>
+      <div #work ><app-our-work  ></app-our-work></div>
+      <!-- <div #blogs ><app-recent-blogs ></app-recent-blogs></div> -->
+      <div #contactus ><app-contact-us  ></app-contact-us></div>
+    </div>
+
+    <div class="top" (click) = 'gotoTop()'><i class='fa fa-long-arrow-up'></i></div>
+    <div class="screen_overlay" id = 'overlay' (click) = 'close()'></div>
+  </div>
+</div>
+
+<div class="smallHome">
+  <!-- <app-start-screen></app-start-screen> -->
+  <div class="burger" (click) = 'open()'><i class="fa fa-bars"></i></div>
+  <div class="screen_overlay" id = 'overlay1' (click) = 'close()'></div>
+  <div class="sidebar" id = 'sidebar' >
+    <div class="menu" id = 'menu'>
+      <div class="menuitem" (click) = 'smallScroll("services")'> <span>SERVICES</span></div>
+      <div class="menuitem" (click) = 'smallScroll("work")'> <span>PROJECTS</span></div>
+      <div class="menuitem" (click) = 'smallScroll("aboutus")'> <span>ABOUT US</span></div>
+      <!-- <div class="menuitem" (click) = 'smallScroll("blogs")'> <span>BLOG</span></div> -->
+      <div class="menuitem"> <span>CLIENTS</span></div>
+      <div class="menuitem" (click) = 'smallScroll("contactus")'> <span>CONTACT</span></div>
+    </div>
+    <div class="sociallinks" id = 'sl'>
+      <div><i class="fa fa-facebook-f" (click) = 'socialLinks("https://www.facebook.com/Rayqube-futuretech-Pvt-Ltd-724560877733767/")'></i></div>
+      <div><i class="fa fa-twitter" (click) = 'socialLinks("https://twitter.com/rayqubeftech/")'></i></div>
+      <div><i class="fa fa-linkedin" (click) = 'socialLinks("https://www.linkedin.com/company/rayqubefuturetech/")'></i></div>
+    </div>
+  </div>
+  <div class="smstart_screen small_screen">
+    <!-- <div class="leftimage"><img src="assets/image/VRwithLight-01.png" alt=""></div> -->
+    <!-- <div class="triangles"><img src="assets/image/VRwithLight-01.png" alt=""></div> -->
+    <div class="inner_container">
+      <div class="logo_n_burger">
+        <div class="logo">AJ</div>
+        <div></div>
+      </div>
+      <div class="tagline_container">
+        <div class="tagline">Anshul Jain</div>
+        <div class="subTagline">Creative Web Designer and Developer</div>
+      </div>
+      <div class="button_container"><div class="button_image" (click) = 'smallScroll("aboutus")'><i class='fa fa-long-arrow-down'></i></div></div>
+    </div>
+
+  </div>
+  <div #aboutus class= 'aboutus' id= 'aboutus'><app-aboutus  ></app-aboutus></div>
+  <div #services class= 'services' id = 'services'><app-our-services ></app-our-services></div>
+  <div #work class= 'work' id = 'work'><app-our-work  ></app-our-work></div>
+  <!-- <div #blogs class= 'blogs' id = 'blogs'><app-recent-blogs ></app-recent-blogs></div> -->
+  <div #contactus class= 'contactus' id = 'contactus'><app-contact-us  ></app-contact-us></div>
+  <div class="topanother" (click) = 'gotoTop()'><i class='fa fa-long-arrow-up'></i></div>
+</div>
+
+
+
+<div class="contact_modal activate" *ngIf="modalStatus">
+  <div class="inner_container">
+    <div class="name field"><input type="text" placeholder="Name" name="name"></div>
+
+      <div class="email field"><input type="email" placeholder="Email" name="email"></div>
+      <div class="contact field"><input type="number" placeholder="Contact number" name="number"></div>
+
+    <div class="message field"><input type="text" placeholder="Message" name="message"></div>
+    <div class="submit"><button>Submit</button></div>
+  </div>
+</div>

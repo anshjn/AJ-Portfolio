@@ -1,0 +1,170 @@
+<div class="container">
+  <div class="textNlogos">
+    <div class="text">
+      <h1>About Me</h1>
+      <p>
+        My name is Anshul Jain. I am from Jaipur. I have started my career as a Customer Care Executive, then I switched to Technical Support Executive.
+        Then I did MCA from JECRC University and got placed in a company as a Web Designer. Few months later I became a front-end developer and learned Adobe XD and Adobe Illustrator.
+        Few months later I started working as a backend developer on Node.JS. And finally now I am a MEAN stack and MERN stack developer. I now work as a freelancer and provide so many types of services.
+      </p>
+      <!-- <div class="points">
+        <div class="circle"></div>
+        <div class="para">
+          We are an Interactive Technology Company headquartered in Dubai (UAE), we specialize in creating immersive for brands.
+        </div>
+      </div>
+      <div class="points">
+        <div class="circle"></div>
+        <div class="para">
+          Our team has an average experience of more than 10+ years.
+        </div>
+      </div>
+      <div class="points">
+        <div class="circle"></div>
+        <div class="para">
+          Our team have worked with more than 100 brands in last 5 years in interactive technology.
+        </div>
+      </div> -->
+    </div>
+    <div class="logos">
+
+      <div class="img"><img src="assets/image/profile.jpg" alt=""></div>
+
+    </div>
+  </div>
+  <div class="team_n_clients_count">
+    <div class="inner">
+      <div class="left" (click)="slider(1)">
+        <i class="fa fa-caret-left"></i>
+      </div>
+      <div class="circles">
+        <div #inner_circle1 class="inner_circles first">
+          <div class="developers circle">
+            <div class="text">28</div>
+            <div class="title">Total Projects</div>
+          </div>
+          <div class="design circle">
+            <div class="text">12</div>
+            <div class="title">Design Projects</div>
+          </div>
+          <div class="developers circle">
+            <div class="text">07</div>
+            <div class="title">Applications</div>
+          </div>
+        </div>
+        <div #inner_circle2 class="inner_circles second">
+          <div class="developers circle">
+            <div class="text">09</div>
+            <div class="title">Websites</div>
+          </div>
+          <div class="design circle">
+            <div class="text">07</div>
+            <div class="title">Clients</div>
+          </div>
+          <div class="developers circle">
+            <div class="text">07</div>
+            <div class="title">Happy Clients</div>
+          </div>
+        </div>
+      </div>
+      <div class="right" (click)="slider(2)">
+        <i class="fa fa-caret-right"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="small_container">
+  <div class="inner_container">
+    <div class="head">About Us</div>
+    <div class="text">
+      We are an interactive technology company headquartered in Jaipur. We
+      specialize in creating immersive experiences for brands. Our team has an
+      average experience of more than 10 years. Our team has worked with more
+      than 100 brands in last 5 years in interactive technology.
+    </div>
+    <div class="icons_containers">
+      <div class="icons activate" #icon1>
+        <div class="icon">
+          <img src="/assets/image/Company_Logos/accenture.png" alt="" />
+        </div>
+        <div class="icon amazon">
+          <img src="/assets/image/Company_Logos/amazon.png" alt="" />
+        </div>
+        <div class="icon">
+          <img src="/assets/image/Company_Logos/gov.png" alt="" />
+        </div>
+        <div class="icon">
+          <img src="/assets/image/Company_Logos/dxb_police.png" alt="" />
+        </div>
+      </div>
+      <div class="icons deactivate" #icon2>
+        <div class="icon">
+          <img src="/assets/image/Company_Logos/gov.png" alt="" />
+        </div>
+        <div class="icon">
+          <img src="/assets/image/Company_Logos/dxb_police.png" alt="" />
+        </div>
+        <div class="icon">
+          <img src="/assets/image/Company_Logos/npcc.png" alt="" />
+        </div>
+        <div class="icon">
+          <img src="/assets/image/Company_Logos/Pico.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="circles">
+      <div class="inner_circle_container">
+        <div
+          class="circle active"
+          #circletraverse1
+          (click)="logoSlider(1)"
+        ></div>
+        <div class="circle" #circletraverse2 (click)="logoSlider(2)"></div>
+        <!-- <div class="circle" (click) = 'logoSlider(3)'></div> -->
+      </div>
+    </div>
+  </div>
+  <div class="team_n_clients_count">
+    <div class="inner">
+      <div class="left" (click)="smallslider(1)">
+        <i class="fa fa-caret-left"></i>
+      </div>
+      <!-- <div class="circles"> -->
+      <div class="aboutus_circles">
+        <div #sinner_circle1 class="inner_circles first">
+          <div class="developers circle">
+            <div class="text">30+</div>
+            <div class="title">Developers</div>
+          </div>
+          <div class="design circle">
+            <div class="text">10+</div>
+            <div class="title">Design & VFX</div>
+          </div>
+          <div class="developers circle">
+            <div class="text">80+</div>
+            <div class="title">Happy Clients</div>
+          </div>
+        </div>
+        <div #sinner_circle2 class="inner_circles second">
+          <div class="developers circle">
+            <div class="text">40+</div>
+            <div class="title">Developers</div>
+          </div>
+          <div class="design circle">
+            <div class="text">20+</div>
+            <div class="title">Design & VFX</div>
+          </div>
+          <div class="developers circle">
+            <div class="text">70+</div>
+            <div class="title">Happy Clients</div>
+          </div>
+        </div>
+      </div>
+      <div class="right" (click)="smallslider(2)">
+        <i class="fa fa-caret-right"></i>
+      </div>
+    </div>
+  </div>
+</div>
