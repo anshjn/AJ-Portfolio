@@ -2,6 +2,10 @@ import { Component, OnInit, AfterViewInit } from "@angular/core";
 import { ViewChild, ElementRef } from "@angular/core";
 import { Router } from '@angular/router';
 import { fromEvent } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { FormBuilder, FormGroup, Validators, Form } from "@angular/forms";
+import { CommonService } from '../common.service';
+import swal from 'sweetalert';
 
 @Component({
   selector: 'app-home',
@@ -16,12 +20,61 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('contactus') contactus: ElementRef;
   @ViewChild('header') header: ElementRef;
   modalStatus = false;
-  constructor(private router: Router) {}
+  sent = false;
+  messageForm: FormGroup;
+  submitted = false;
+  response = true;
+  constructor(private router: Router, private http: HttpClient, private formBuilder: FormBuilder, private common: CommonService) {
+    
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.messageForm = this.formBuilder.group({
+      
+      name: ["", Validators.required],
+      contact: ["", [Validators.required, Validators.minLength(10)]],
+      email: ["", [Validators.required, Validators.email]],
+      message: ["", Validators.required]
+    });
+  }
   ngAfterViewInit() {
     const scroll$ = fromEvent(window, 'scroll');
     console.log(scroll$);
+  }
+  get f() { return this.messageForm.controls; }
+  
+  send() {
+
+        
+    let obj = {
+      name: this.messageForm.get('name').value,
+      email: this.messageForm.get('email').value,
+      contact: this.messageForm.get('contact').value,
+      message: this.messageForm.get('message').value
+    }
+    console.log(obj);
+    this.common.status = true;
+    this.http.post('https://anshul-portfolio-backend.herokuapp.com/addcontact', obj).subscribe(resp => {
+      console.log(resp);
+      if(resp['status'] === 'success') {
+        swal("Sent! I will reach you back shortly.").then(() => {
+          this.common.status = false;
+          this.modalStatus = false;
+          this.messageForm.reset();
+          this.close();
+        });
+      }
+    }, err => {
+      swal("Something went wrong!").then(() => {
+        this.common.status = false;
+      });
+        
+      
+    });
+  }
+  resetForm() {
+    this.messageForm.get('name').setValue('');
+    
   }
   scroll(el) {
     console.log(el);
@@ -91,7 +144,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
   open() {
     document.getElementById('sl').style.display = 'flex';
-    document.getElementById('overlay1').style.display = 'flex';
+    document.getElementById('overlay2').style.display = 'flex';
 
     document.getElementById('sidebar').style.width = '60vw';
     document.getElementById('menu').style.display = 'flex';
@@ -99,14 +152,15 @@ export class HomeComponent implements OnInit, AfterViewInit {
   close() {
     document.getElementById('menu').style.display = 'none';
     document.getElementById('sl').style.display = 'none';
-    document.getElementById('overlay1').style.display = 'none';
+    document.getElementById('overlay2').style.display = 'none';
     document.getElementById('sidebar').style.width = '0vw';
     document.getElementById('overlay').style.display = 'none';
+    document.getElementById('overlay3').style.display = 'none';
     this.modalStatus = false;
   }
   showModal() {
     this.modalStatus = true;
-    document.getElementById('overlay').style.display = 'flex';
+    document.getElementById('overlay3').style.display = 'flex';
   }
   socialLinks(e) {
     window.open(e, "_blank");

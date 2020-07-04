@@ -9,6 +9,7 @@ export class OurServicesComponent implements OnInit {
   @ViewChild('services') services: ElementRef;
   @ViewChild('industries') industries: ElementRef;
   switchStatus = false;
+  
   constructor() { }
 
   ngOnInit() {
