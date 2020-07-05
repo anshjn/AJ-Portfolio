@@ -3,7 +3,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators, Form } from "@angular/forms";
 import { Router } from '@angular/router';
 import { CommonService } from '../common.service';
-import swal from 'sweetalert';
 
 @Component({
   selector: 'app-contact-us',
@@ -26,7 +25,7 @@ export class ContactUsComponent implements OnInit {
       name: ["", Validators.required],
       contact: ["", [Validators.required, Validators.minLength(10)]],
       email: ["", [Validators.required, Validators.email]],
-      message: ["", [Validators.required, Validators.minLength(6)]]
+      message: ["", [Validators.required]]
 
     });
   }
@@ -50,16 +49,19 @@ export class ContactUsComponent implements OnInit {
     this.http.post('https://anshul-portfolio-backend.herokuapp.com/addcontact', obj).subscribe(resp => {
       console.log(resp);
       if(resp['status'] === 'success') {
-        swal("Sent! I will reach you back shortly.").then(() => {
-          this.common.status = false;
-          this.messageForm.reset();
-        });
+        this.common.msg = 'Message sent successfully!'
+        this.common.status = false;
+        this.messageForm.reset();
+        setTimeout(() => {
+          this.common.msg = null;
+        }, 2000);
       }
     }, err => {
-      swal("Something went wrong!").then(() => {
-        this.common.status = false;
-      });
-      
+      this.common.msg = 'Something went wrong!';
+      this.common.status = false;
+      setTimeout(() => {
+        this.common.msg = null;
+      }, 2000);
     });
   }
   gotoTop() {

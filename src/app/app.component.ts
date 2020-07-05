@@ -8,5 +8,6 @@ import { CommonService } from './common.service';
 })
 export class AppComponent {
   title = 'rayqube-frontend';
+  
   constructor(public common: CommonService) {}
 }

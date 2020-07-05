@@ -2,3 +2,8 @@
 <div class="loader" *ngIf="common.status">
     <img src="assets/image/loader.gif" alt="">
 </div>
+
+
+<div class="toast_container" *ngIf="common.msg">
+    <div class = 'toast'>{{common.msg}}</div>
+</div>

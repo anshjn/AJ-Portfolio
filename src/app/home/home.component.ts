@@ -5,7 +5,7 @@ import { fromEvent } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators, Form } from "@angular/forms";
 import { CommonService } from '../common.service';
-import swal from 'sweetalert';
+
 
 @Component({
   selector: 'app-home',
@@ -57,17 +57,21 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.http.post('https://anshul-portfolio-backend.herokuapp.com/addcontact', obj).subscribe(resp => {
       console.log(resp);
       if(resp['status'] === 'success') {
-        swal("Sent! I will reach you back shortly.").then(() => {
+          this.common.msg = 'Message sent successfully!'
           this.common.status = false;
           this.modalStatus = false;
           this.messageForm.reset();
           this.close();
-        });
+          setTimeout(() => {
+            this.common.msg = null;
+          }, 2000);
       }
     }, err => {
-      swal("Something went wrong!").then(() => {
-        this.common.status = false;
-      });
+      this.common.msg = 'Something went wrong!';
+      this.common.status = false;
+      setTimeout(() => {
+        this.common.msg = null;
+      }, 2000);
         
       
     });

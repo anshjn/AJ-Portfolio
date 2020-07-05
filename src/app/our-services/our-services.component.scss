@@ -80,7 +80,7 @@
       height: 30vh;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      justify-content: flex-start;
       .svg {
         fill: black;
         width: 7vh;
@@ -98,12 +98,13 @@
         fill: white;
       }
       .head{
-        padding: 0px 0 10px 0;
+        padding: 20px 0 10px 0;
         font-size: 2vh;
         font-weight: 600;
+
       }
       .text{
-        font-size: 1.35vh;
+        font-size: 1.5vh;
         color: $fontcolor;
         line-height: 1.6;
       }
