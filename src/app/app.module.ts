@@ -11,6 +11,7 @@ import { OurServicesComponent } from './our-services/our-services.component';
 import { OurWorkComponent } from './our-work/our-work.component';
 import { RecentBlogsComponent } from './recent-blogs/recent-blogs.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import * as io from 'socket.io-client';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
