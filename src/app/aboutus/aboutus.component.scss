@@ -62,7 +62,7 @@
       font-family: 'Poppins', sans-serif;
       color: #706F72;
       p{
-        font-size: 1.7vh;
+        font-size: 2vh;
         font-weight: 400;
         letter-spacing: 1px;
         margin: 5px 0;
@@ -235,7 +235,7 @@
 
 .small_container{
   display: none;
-  height: 60vh;
+  // height: 60vh;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -255,7 +255,7 @@
       letter-spacing: 2px;
     }
     .text{
-      font-size: 1.5vh;
+      font-size: 2vh;
       padding: 10px 0 20px;
       font-family: regularfont;
       word-spacing: 2px;
@@ -308,7 +308,7 @@
   }
   .team_n_clients_count{
     width: 100%;
-    height: 30%;
+    height: 15vh;
     display: flex;
     // background-image: url();
     background-image: url('../../assets/image/InfoImage.jpg');
@@ -322,7 +322,7 @@
     .inner{
       margin: auto;
       display: flex;
-      height: 80%;
+      
       align-items: center;
       width: 85%;
       .circles{

@@ -11,7 +11,12 @@ import { OurServicesComponent } from './our-services/our-services.component';
 import { OurWorkComponent } from './our-work/our-work.component';
 import { RecentBlogsComponent } from './recent-blogs/recent-blogs.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+<<<<<<< HEAD
 import * as io from 'socket.io-client';
+=======
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+>>>>>>> 8a3b71ab53b0e52623fefb9d3bedb02660caeb34
 
 @NgModule({
   declarations: [
@@ -28,7 +33,12 @@ import * as io from 'socket.io-client';
   imports: [
     BrowserModule,
     AppRoutingModule,
+<<<<<<< HEAD
 
+=======
+    HttpClientModule,
+    ReactiveFormsModule
+>>>>>>> 8a3b71ab53b0e52623fefb9d3bedb02660caeb34
   ],
   providers: [],
   bootstrap: [AppComponent]

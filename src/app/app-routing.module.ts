@@ -4,9 +4,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'start', component: StartScreenComponent },
-  { path: 'home', component: HomeComponent },
   { path: '', pathMatch: 'full', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  
 
 ];
 

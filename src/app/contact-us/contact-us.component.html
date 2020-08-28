@@ -10,7 +10,7 @@
         <div class="icon"><img src="/assets/image/location.png" alt=""></div>
         <div class="head">Address</div>
         <div class="texts">
-          <div class="text">176 Gayatri nagar B, Maharani Farm Jaipur</div>
+          <div class="text">176 Gayatri nagar B, Maharani Farm, Jaipur, Rajasthan, India, 302018</div>
         </div>
       </div>
       <div class="block">
@@ -34,7 +34,7 @@
   <div class="map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.6929622352445!2d75.77709991547027!3d26.849716369262072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5be41abc4e3%3A0xa7d9bdfa8246add5!2sBairathi%20St%2C%20Mahaveer%20Nagar%202%2C%20Gayatri%20Nagar%20B%2C%20Durgapura%2C%20Jaipur%2C%20Rajasthan%20302020!5e0!3m2!1sen!2sin!4v1593029465200!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
   </div>
-  <div class="bottom_navigation">
+  <!-- <div class="bottom_navigation">
 
     <div class="sections">
       <div class="about section">
@@ -86,10 +86,10 @@
         <div class="sitemap head">Sitemap &nbsp; <i class='fa fa-long-arrow-right'></i></div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="copyright">
-    <div class='copy'>Copyright &copy; 2020 by Rayqube Future Tech. All Rights Reserved.</div>
+    <div class='copy'>Copyright &copy; 2020 by AJ Portfolio All Rights Reserved.</div>
   </div>
 </div>
 
@@ -104,95 +104,71 @@
     <div class="blocks">
       <div class="block">
         <div class="icon"><img src="/assets/image/location.png" alt=""></div>
-        <div class="head">Our Office</div>
+        <div class="head">Address</div>
         <div class="texts">
-          <div class="text">Rayqube Future Tech DMCC 2806, Mazaya Business Avenue AA1, Jumeirah Lake Tower, Dubai</div>
-          <div class="text">216 Sankalp Tower, Queens Road Turn, Khatipura Road,Vaishali Nagar, Jaipur, Rajasthan 302012 India</div>
+          <div class="text">176 Gayatri nagar B, Maharani Farm, Jaipur, Rajasthan, India, 302018</div>
         </div>
       </div>
       <div class="block">
         <div class="icon"><img src="/assets/image/email.png" alt=""></div>
         <div class="head">Email</div>
         <div class="texts">
-          <div class="text">info@rayqube.com</div>
-          <div class="text">sankalp@rayqube.com</div>
+          <div class="text">anshuljn087@gmail.com</div>
+          <div class="text">anshjn087@gmail.com</div>
         </div>
       </div>
       <div class="block">
         <div class="icon"><img src="/assets/image/call.png" alt=""></div>
         <div class="head">Phone</div>
         <div class="texts">
-          <div class="text">Dubai: +971-45573075</div>
-          <div class="text">Lorem ipsum dolor sit amet</div>
+          <div class="text">8233091258</div>
+          <div class="text">8619400130</div>
         </div>
       </div>
     </div>
   </div>
   <div class="map">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.442262050438!2d75.7510122154041!3d26.921190466205253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db37beaac3f33%3A0xf1e3a9a5b66701d3!2sSankalp%20Tower!5e0!3m2!1sen!2sin!4v1584540669655!5m2!1sen!2sin"
-
-      frameborder="0"
-      style="border:0;"
-      allowfullscreen="false"
-      aria-hidden="false"
-      tabindex="0"
-      controls="false"
-    ></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.6929622352445!2d75.77709991547027!3d26.849716369262072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5be41abc4e3%3A0xa7d9bdfa8246add5!2sBairathi%20St%2C%20Mahaveer%20Nagar%202%2C%20Gayatri%20Nagar%20B%2C%20Durgapura%2C%20Jaipur%2C%20Rajasthan%20302020!5e0!3m2!1sen!2sin!4v1593029465200!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
   </div>
-  <div class="bottom_navigation">
-
-    <div class="sections">
-      <div class="about section">
-        <div class="head">About us</div>
-        <div class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum porro
-          nobis, sit eius doloremque accusantium
-        </div>
-        <div class="three_circles">
-          <div class="icon" (click) = 'socialLinks("https://www.facebook.com/Rayqube-futuretech-Pvt-Ltd-724560877733767/")'><i class = 'fa fa-facebook-f'></i></div>
-          <div class="icon" (click) = 'socialLinks("https://twitter.com/rayqubeftech/")'><i class = 'fa fa-twitter'></i></div>
-          <div class="icon" (click) = 'socialLinks("https://www.linkedin.com/company/rayqubefuturetech/")'><i class = 'fa fa-linkedin'></i></div>
-        </div>
+  <div class="contact_form" *ngIf="!sent">
+    <form action="" [formGroup]="messageForm" (ngSubmit)="send()">
+      <div class="name field"><input type="text" formControlName="name"  placeholder="Name" name="name"></div>
+      <div class="msg" *ngIf="f.name.touched && f.name.errors">
+        <div *ngIf="f.name.errors.required">Name is required</div>
       </div>
-      <div class="recent_posts section">
-        <div class="head">Recent Posts</div>
-        <div class="posts">
-          <div class="post">
-            <div class="title">Lorem</div>
-            <div class="admin_date">
-              <div class="admin">Admin</div>
-              <div class="date">Dec 12, 2010</div>
-            </div>
-          </div>
-          <div class="post">
-            <div class="title">Lorem</div>
-            <div class="admin_date">
-              <div class="admin">Admin</div>
-              <div class="date">Dec 12, 2010</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="quick_links section">
-        <div class="head">Quick Links</div>
-        <div class="links">
-          <div class="column">
-            <div>About Us</div>
-            <div>Services</div>
-            <div>Contact Us</div>
-            <div>Blog</div>
-          </div>
-          <div class="column">
-            <div>Clients</div>
-            <div>Privacy Policy</div>
-            <div>Locations</div>
-          </div>
-          <div class="sitemap head">Sitemap &nbsp;<i class= 'fa fa-long-arrow-right'></i></div>
-        </div>
 
+      
+      <div class="email field"><input type="email" formControlName="email" placeholder="Email" name="email"></div>
+      <div class="msg" *ngIf="f.email.touched && f.email.errors">
+        <div *ngIf="f.email.errors.required">Name is required</div>
+        <div *ngIf="f.email.errors.email">Email must be a valid email address.</div>
+      </div>
+
+
+      <div class="contact field"><input type="number" formControlName="contact" placeholder="Contact number" name="number"></div>
+      <div class="msg" *ngIf="f.contact.touched && f.contact.errors">
+        <div *ngIf="f.contact.errors.required">Contact is required</div>
+        <div *ngIf="f.contact.errors.minlength">Contact must be at least 10 digits.</div>
+      </div>
+      <div class="message field"><input type="text" formControlName="message" placeholder="Message" name="message"></div>
+      <div class="submit"><input type = 'submit' value = 'Send'></div>
+    </form>
+  </div>
+  <div class="contact_form" *ngIf="sent">
+    <div class = 'response' *ngIf="!response">
+      <h2>Something went wrong.</h2>
+      <div>
+        If you are connected to internet then please try again.
       </div>
     </div>
+    <div class = 'response' *ngIf="response">
+      <h2>Message Sent</h2>
+      <div>
+        We will reach you shortly.
+      </div>
+    </div>
+    
+    
   </div>
   <div class="copyright">
     <div class='copy'>Copyright &copy; 2020 by Rayqube Future Tech. All Rights Reserved.</div>

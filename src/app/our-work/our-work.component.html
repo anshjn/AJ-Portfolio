@@ -2,43 +2,44 @@
   <div class="header">We Are Proud Of Our Work</div>
   <div class="taglines">
     <div class="tag_part">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis
-      nostrum quisquam beatae quibusdam harum sapiente illum ducimus,
-    </div>
-    <div class="tag_part">
-      iusto architecto ex deleniti nihil temporibus mollitia saepe reiciendis a
-      exercitationem numquam. Velit!
+      All the below mentioned projects frontend development has been done by me. 
     </div>
   </div>
   <div class="work_grid">
     <div class="left_grid gridvalues">
-      <div class="grid1 image">
-        <img src="assets/image/services/1_Our_Work.jpg" alt="" />
-        <div class="hover">Holographic Projection</div>
+      <div class="grid1 image" (click) = 'selectImage("herbal")'>
+        <div class="background"></div>
+        <img src="/assets/image/services/daburherbal/herbal1.PNG" alt="" />
+        <div class="hover">Website Designed and developed on Angular while employed at Rayqube Future Tech.</div>
       </div>
       <div class="bottom">
-        <div class="grid2 image">
-          <img src="assets/image/services/3_Our_Work.jpg" alt="" />
-          <div class="hover">Virtual Reality</div>
+        <div class="grid2 image" (click) = 'selectImage("nexon")'>
+          <div class="background"></div>
+          <img src="/assets/image/services/nexonev/nexon1.webp" alt="" />
+          <div class="hover">Application designed and developed on Ionic while employed at Rayqube Future Tech.</div>
         </div>
-        <div class="grid3 image">
-          <img src="assets/image/services/5_Our_Work.jpg" alt="" />
-          <div class="hover">Mobile Application</div>
+        <div class="grid3 image" (click) = 'selectImage("stylistfinder")'>
+          <div class="background"></div>
+          <img src="/assets/image/services/stylistfinderapk/stylistfinder1.webp" alt="" />
+          <div class="hover">Application designed and developed on Ionic while employed at Rayqube Future Tech.</div>
         </div>
       </div>
     </div>
     <div class="center_grid gridvalues">
-      <div class="grid4 image">
-        <img src="assets/image/services/4_Our_Work.jpg" alt="" />
-        <div class="hover">Virtual Reality</div>
+      <div class="grid4 image" (click) = 'selectImage("tgelf")'>
+        <div class="background"></div>
+        <img src="/assets/image/services/tgelf/tgelf1.PNG" alt="" />
+        <div class="hover">Website Designed and developed on Angular while employed at Rayqube Future Tech.</div>
       </div>
     </div>
     <div class="right_grid gridvalues">
-      <div class="grid5 image">
-        <img src="assets/image/services/2_Our_Work.jpg" alt="" />
-        <div class="hover">Robotics</div>
+      <div class="grid5 image" (click) = 'selectImage("dashboard")'>
+        <div class="background"></div>
+        <img src="/assets/image/services/stylistfinderDashboard/dashboard1.PNG" alt="" />
+        <div class="hover">Website Designed and developed on Angular while employed at Rayqube Future Tech.</div> 
       </div>
       <div class="grid6 image">
+        <div class="background"></div>
         <img src="assets/image/services/2_Our_Work.jpg" alt="" />
         <div class="hover">Multitouch Platform</div>
       </div>
@@ -53,19 +54,63 @@
     <div class="header">We Are Proud Of Our Work</div>
     <div class="taglines">
       <div class="tag_part">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis
-        nostrum quisquam beatae quibusdam harum sapiente illum ducimus, iusto
-        architecto ex deleniti nihil temporibus mollitia saepe reiciendis a
-        exercitationem numquam. Velit!
+        All the below mentioned projects frontend development has been done by me. 
       </div>
     </div>
     <div class="work_grid">
-      <div class="image grid1"><img src="assets/image/services/1_Our_Work.jpg" alt="" /></div>
-      <div class="image grid2"><img src="assets/image/services/3_Our_Work.jpg" alt="" /></div>
-      <div class="image grid3"><img src="assets/image/services/5_Our_Work.jpg" alt="" /></div>
-      <div class="image grid4"><img src="assets/image/services/4_Our_Work.jpg" alt="" /></div>
-      <div class="image grid5"><img src="assets/image/services/2_Our_Work.jpg" alt="" /></div>
-      <div class="image grid6"><img src="assets/image/services/2_Our_Work.jpg" alt="" /></div>
+      <div class="image grid1" (click) = 'selectImage1("herbal")'><img src="/assets/image/services/daburherbal/herbal1.PNG" alt="" /></div>
+      <div class="image grid2" (click) = 'selectImage1("nexon")'><img src="/assets/image/services/nexonev/nexon1.webp" alt="" /></div>
+      <!-- <div class="image grid3"><img src="/assets/image/services/stylistfinderapk/stylistfinder1.webp" alt="" /></div> -->
+      <div class="image grid4" (click) = 'selectImage1("tgelf")'><img src="/assets/image/services/tgelf/tgelf1.PNG" alt="" /></div>
+      <div class="image grid3" (click) = 'selectImage1("dashboard")'><img src="/assets/image/services/stylistfinderDashboard/dashboard1.PNG" alt="" /></div>
+      <div class="image grid5" (click) = 'selectImage1("stylistfinder")'><img src="/assets/image/services/stylistfinderapk/stylistfinder1.webp" alt="" /></div>
+      <!-- <div class="image grid6"><img src="assets/image/services/2_Our_Work.jpg" alt="" /></div> -->
     </div>
+
+    <div #overlay1 class="overlay1" id = 'overlay1' (click) = 'close1()'></div>
+    <!-- <div class="close"><i class="fa fa-times" (click) = 'close1()'></i></div> -->
+    <div #slider1 class="slider_container1" id = 'slider1'>
+      
+      <div class="inner">
+        
+        <div class="left arrows" (click) = 'prev1()'><i class='fa fa-chevron-left'></i></div>
+        <div class="slider_box">
+          <div class="slide_cover" *ngFor="let item of images; let i = index;" [id] = "'slides' + i">
+            <div class="slide"><img [src]="item.src" alt=""></div>
+            
+          </div>
+          
+        </div>
+        <div class="right arrows" (click) = 'next1()'><i class='fa fa-chevron-right'></i></div>
+      </div>
+    </div>
+
   </div>
 </div>
+
+
+
+
+<!-- --------------------------------------Gallery Model---------------------------------------- -->
+
+<div class="overlay" id = 'overlay' (click) = 'close()'></div>
+<div class="slider_container" id = 'slider'>
+  <div class="close"><i class="fa fa-times" (click) = 'close()'></i></div>
+  <div class="inner">
+    
+    <div class="left arrows" (click) = 'prev()'><i class='fa fa-chevron-left'></i></div>
+    <div class="slider_box">
+      <div class="slide_cover" *ngFor="let item of images; let i = index;" [id] = "'slide' + i">
+        <div class="slide"><img [src]="item.src" alt=""></div>
+        
+      </div>
+      
+    </div>
+    <div class="right arrows" (click) = 'next()'><i class='fa fa-chevron-right'></i></div>
+  </div>
+</div>
+
+
+
+
+

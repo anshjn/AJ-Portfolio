@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import * as io from 'socket.io-client';
+import { CommonService } from './common.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,12 +10,11 @@ import * as io from 'socket.io-client';
 export class AppComponent {
   title = 'AJ Portfolio';
   socket;
-  constructor( ) {
+  constructor(public common: CommonService ) {
     this.socket = io('http://localhost:3000/');
     this.socket.on('connection', val => {
       console.log('connected');
     });
   }
-
 
 }

@@ -27,3 +27,34 @@
     height: 80px;
   }
 }
+.toast_container {
+  position: fixed;
+  bottom: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.toast {
+  font-size: 3vh;
+  padding: 10px 12px;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  z-index: 20;
+}
+.loader {
+  width: 100%;
+  height: 100vh;
+  background: #0e111f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  position: fixed;
+  opacity: .5;
+  img {
+    width: 70%;
+  }
+}

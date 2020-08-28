@@ -25,7 +25,7 @@ export class AboutusComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.logoSlider(1);
+    // this.logoSlider(1);
   }
 
   slider(e) {
@@ -38,19 +38,19 @@ export class AboutusComponent implements OnInit, AfterViewInit {
     }
   }
 
-  logoSlider(e) {
-    if (e == 1) {
-      this.icon1.nativeElement.style.display = 'none';
-      this.icon2.nativeElement.style.display = 'flex';
-      this.circletraverse1.nativeElement.style.backgroundColor = '#0444a0';
-      this.circletraverse2.nativeElement.style.backgroundColor = 'transparent';
-    } else if (e == 2) {
-      this.icon1.nativeElement.style.display = 'flex';
-      this.icon2.nativeElement.style.display = 'none';
-      this.circletraverse2.nativeElement.style.backgroundColor = '#0444a0';
-      this.circletraverse1.nativeElement.style.backgroundColor = 'transparent';
-    }
-  }
+  // logoSlider(e) {
+  //   if (e == 1) {
+  //     this.icon1.nativeElement.style.display = 'none';
+  //     this.icon2.nativeElement.style.display = 'flex';
+  //     this.circletraverse1.nativeElement.style.backgroundColor = '#0444a0';
+  //     this.circletraverse2.nativeElement.style.backgroundColor = 'transparent';
+  //   } else if (e == 2) {
+  //     this.icon1.nativeElement.style.display = 'flex';
+  //     this.icon2.nativeElement.style.display = 'none';
+  //     this.circletraverse2.nativeElement.style.backgroundColor = '#0444a0';
+  //     this.circletraverse1.nativeElement.style.backgroundColor = 'transparent';
+  //   }
+  // }
 
   smallslider(e) {
     if (e === 1) {
