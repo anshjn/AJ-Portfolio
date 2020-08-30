@@ -15,6 +15,10 @@ export class AppComponent {
     this.socket.on('connection', val => {
       console.log('connected');
     });
+    this.socket.on('addblog', data => {
+      this.common.allBlogs = data;
+      console.log(this.common.allBlogs);
+    });
   }
 
 }

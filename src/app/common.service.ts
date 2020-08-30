@@ -6,5 +6,6 @@ import { Injectable } from '@angular/core';
 export class CommonService {
   status = false;
   msg = null;
+  allBlogs = null;
   constructor() { }
 }

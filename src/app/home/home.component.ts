@@ -25,12 +25,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   submitted = false;
   response = true;
   constructor(private router: Router, private http: HttpClient, private formBuilder: FormBuilder, private common: CommonService) {
-    
+
   }
 
   ngOnInit() {
     this.messageForm = this.formBuilder.group({
-      
+
       name: ["", Validators.required],
       contact: ["", [Validators.required, Validators.minLength(10)]],
       email: ["", [Validators.required, Validators.email]],
@@ -38,14 +38,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
     });
   }
   ngAfterViewInit() {
-    const scroll$ = fromEvent(window, 'scroll');
-    console.log(scroll$);
+
   }
   get f() { return this.messageForm.controls; }
-  
+
   send() {
 
-        
+
     let obj = {
       name: this.messageForm.get('name').value,
       email: this.messageForm.get('email').value,
@@ -72,13 +71,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
       setTimeout(() => {
         this.common.msg = null;
       }, 2000);
-        
-      
+
+
     });
   }
   resetForm() {
     this.messageForm.get('name').setValue('');
-    
+
   }
   scroll(el) {
     console.log(el);
