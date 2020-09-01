@@ -1,0 +1,11 @@
+<div class="container">
+  <form [formGroup]="addBlogForm" enctype="multipart/form-data" (ngSubmit)="submitForm()">
+    <input type = 'text' formControlName="title" name = 'title'/>
+    <input type = 'date' formControlName="date" name = 'date'/>
+    <textarea name="content" formControlName="content"></textarea>
+    <!-- <div class="button"><button>Add Paragraph</button></div> -->
+    <input type="file" (change) = 'onFileChange($event)' name="image" id="">
+    <button type = 'submit'>Add blog</button>
+  </form>
+</div>
+

@@ -15,13 +15,13 @@ export class ContactUsComponent implements OnInit {
   submitted = false;
   response = true;
   constructor(private router: Router, private http: HttpClient, private formBuilder: FormBuilder, private common: CommonService) {
-    
+
   }
-  
+
 
   ngOnInit() {
     this.messageForm = this.formBuilder.group({
-      
+
       name: ["", Validators.required],
       contact: ["", [Validators.required, Validators.minLength(10)]],
       email: ["", [Validators.required, Validators.email]],
@@ -31,13 +31,13 @@ export class ContactUsComponent implements OnInit {
   }
   get f() { return this.messageForm.controls; }
   send() {
-    
+
     console.log('validation', this.messageForm.invalid);
         // stop here if form is invalid
         if (this.messageForm.invalid) {
-            
+
             return;
-        }   
+        }
     let obj = {
       name: this.messageForm.get('name').value,
       email: this.messageForm.get('email').value,

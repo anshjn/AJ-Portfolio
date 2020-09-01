@@ -13,6 +13,7 @@ import { RecentBlogsComponent } from './recent-blogs/recent-blogs.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddblogComponent } from './addblog/addblog.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     OurWorkComponent,
     RecentBlogsComponent,
     ContactUsComponent,
+    AddblogComponent,
   ],
   imports: [
     BrowserModule,
