@@ -33,5 +33,6 @@ export class AddblogComponent implements OnInit {
     formData.append('content', this.addBlogForm.get('content').value);
     formData.append('image', this.addBlogForm.get('image').value);
     console.log(this.addBlogForm.get('date').value);
+    
   }
 }
