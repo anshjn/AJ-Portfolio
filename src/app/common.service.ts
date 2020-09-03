@@ -8,10 +8,10 @@ export class CommonService {
   status = false;
   msg = null;
   allBlogs = null;
-  baseUrl = 'https://anshul-portfolio-backend.herokuapp.com/';
+  baseUrl = 'http://localhost:3000/';
   constructor(private http: HttpClient) { }
 
   postApi(url, obj) {
-    this.http.post(base)
+    return this.http.post(this.baseUrl + url, obj);
   }
 }
